@@ -28,4 +28,44 @@
   .header-menu .menu.sf-js-enabled ul {
     margin-left: 0px; }
 
+.banner-image {
+  height: 300px;
+  width: 100%;
+  background-size: cover; }
+
+.comment-add a:before {
+  content: "\f0e5";
+  font-family: 'FontAwesome';
+  margin-right: 4px; }
+
+.node-readmore a:before {
+  content: "\f061";
+  font-family: 'FontAwesome';
+  margin-right: 4px; }
+
+.node__submitted {
+  margin-bottom: 5px; }
+
+.node.node--type-article .field--name-field-image {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+.node.node--type-article.node--view-mode-teaser {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd; }
+
+.field--name-field-tags {
+  margin-bottom: 5px; }
+  .field--name-field-tags:before {
+    content: "\f02c";
+    font-family: 'FontAwesome';
+    float: left;
+    margin-right: 5px;
+    color: #337ab7; }
+
+.username:before {
+  content: "\f007";
+  font-family: 'FontAwesome';
+  margin-right: 4px; }
+
 /*# sourceMappingURL=styles.css.map */

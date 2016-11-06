@@ -1,0 +1,16 @@
+.node.node--type-article {
+  .field--name-field-image {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    img {
+
+    }
+  }
+
+  &.node--view-mode-teaser {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}

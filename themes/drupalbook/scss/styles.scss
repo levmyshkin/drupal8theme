@@ -1,5 +1,11 @@
+$link: #337ab7;
+
 @import 'blocks/header';
 
-body {
+@import 'components/banner_image';
+@import 'components/links_node';
+@import 'components/node';
+@import 'components/node_blog';
+@import 'components/tags_field';
+@import 'components/user_info';
 
-}

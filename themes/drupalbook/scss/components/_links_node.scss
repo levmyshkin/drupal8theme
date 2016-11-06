@@ -1,0 +1,19 @@
+.comment-add {
+  a {
+    &:before {
+      content: "\f0e5";
+      font-family: 'FontAwesome';
+      margin-right: 4px;
+    }
+  }
+}
+
+.node-readmore {
+  a {
+    &:before {
+      content: "\f061";
+      font-family: 'FontAwesome';
+      margin-right: 4px;
+    }
+  }
+}

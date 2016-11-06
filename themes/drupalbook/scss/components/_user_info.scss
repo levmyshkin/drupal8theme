@@ -1,0 +1,7 @@
+.username {
+  &:before {
+    content: "\f007";
+    font-family: 'FontAwesome';
+    margin-right: 4px;
+  }
+}

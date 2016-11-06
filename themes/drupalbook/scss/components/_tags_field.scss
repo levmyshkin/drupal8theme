@@ -1,0 +1,11 @@
+.field--name-field-tags {
+  margin-bottom: 5px;
+
+  &:before {
+    content: "\f02c";
+    font-family: 'FontAwesome';
+    float: left;
+    margin-right: 5px;
+    color: $link;
+  }
+}
