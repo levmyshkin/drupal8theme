@@ -1,0 +1,37 @@
+.header-top {
+  color: #ffffff;
+  background: #181818;
+  height: 40px;
+  padding: 3px 0 0;
+  overflow: hidden;
+  p {
+    margin: 0;
+    line-height: 40px;
+  }
+}
+
+.logo {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+}
+
+.header-menu {
+  .menu.sf-js-enabled {
+    float: right;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 34px;
+    a {
+      background: #30CAB2;
+      color: #fff;
+    }
+    ul {
+      margin-left: 0px;
+    }
+  }
+}

@@ -1,6 +1,11 @@
 base:
   version: VERSION
   css:
+    theme:
+      fonts/font-awesome/css/font-awesome.min.css: {}
+      css/bootstrap.min.css: {}
+      js/superfish/dist/css/superfish.css: {}
+      css/styles.css: {}
     component:
       css/components/action-links.css: { weight: -10 }
       css/components/breadcrumb.css: { weight: -10 }
@@ -25,6 +30,13 @@ base:
       css/components/tabs.css: { weight: -10 }
       css/components/textarea.css: { weight: -10 }
       css/components/ui-dialog.css: { weight: -10 }
+  js:
+    js/superfish/dist/js/hoverIntent.js: {}
+    js/superfish/dist/js/superfish.min.js: {}
+    js/drupalbook.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 
 book-navigation:
   version: VERSION

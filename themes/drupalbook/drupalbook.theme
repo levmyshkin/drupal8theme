@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Preprocess functions and theme settings.
+ */
+
+/**
+ * Implements theme_preprocess_page().
+ */
+function drupalbook_preprocess_page(&$variables) {
+  $variables['logo'] = '<img src="' . base_path() .
+    drupal_get_path('theme', 'drupalbook') . '/logo.png">';
+}
+
