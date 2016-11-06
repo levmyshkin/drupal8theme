@@ -1,0 +1,23 @@
+name: Drupalbook
+type: theme
+description: 'Drupalbook theme.'
+package: Core
+version: 1.0
+core: 8.x
+
+libraries:
+  - drupalbook/base
+  - core/normalize
+
+libraries-extend:
+  user/drupal.user:
+    - drupalbook/user
+  core/drupal.dropbutton:
+    - drupalbook/dropbutton
+  core/drupal.dialog:
+    - drupalbook/dialog
+  file/drupal.file:
+    - drupalbook/file
+  core/drupal.progress:
+    - drupalbook/progress
+
