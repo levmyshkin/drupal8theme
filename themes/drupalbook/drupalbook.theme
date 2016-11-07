@@ -15,8 +15,12 @@ function drupalbook_preprocess_page(&$variables) {
   $banner = theme_get_setting('banner_image');
   if (!empty($banner) && !empty($banner[0])) {
     $banner_file = File::load($banner[0]);
-    $banner_url = file_create_url($banner_file->getFileUri());
-    $variables['banner_image'] = '<div class="banner-image" style="background-image: url(\'' . $banner_url . '\')"></div>';
+    $test = 'asfas';
+    if (!empty($banner_file)) {
+       $banner_uri = $banner_file->getFileUri();
+       $banner_url = file_create_url($banner_uri);
+       $variables['banner_image'] = '<div class="banner-image" style="background-image: url(\'' . $banner_url . '\')"></div>';
+    }
   }
 }
 
@@ -36,4 +40,26 @@ function drupalbook_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\F
     '#description'   => t("The uploaded image will be displayed in page header."),
     '#upload_location' => 'public://drupalbook_banners/',
   );
+
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'drupalbook_settings_form_submit';
+    }
+  }
+
+}
+
+/**
+ * Submit callback.
+ */
+function drupalbook_settings_form_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $banner_image = $form_state->getValue('banner_image');
+  if (!empty($banner_image)) {
+    $query = \Drupal::database()->update('file_managed');
+    $query->fields([
+      'status' => '1'
+    ]);
+    $query->condition('fid', $banner_image[0]);
+    $query->execute();
+  }
 }
